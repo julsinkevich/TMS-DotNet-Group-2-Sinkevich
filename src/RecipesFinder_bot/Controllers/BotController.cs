@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using RecipesFinder_bot.Interfaces;
-using RecipesFinder_bot.Models;
 using RecipesFinder_bot.Resources;
 using Telegram.Bot;
 using Telegram.Bot.Types;

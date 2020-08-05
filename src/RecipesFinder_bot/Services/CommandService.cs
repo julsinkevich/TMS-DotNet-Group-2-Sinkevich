@@ -1,6 +1,5 @@
 using RecipesFinder_bot.Commands;
 using RecipesFinder_bot.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace RecipesFinder_bot.Models
