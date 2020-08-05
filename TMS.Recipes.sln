@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMS.Recipes.ConsoleApp", "src\TMS.Recipes.ConsoleApp\TMS.Recipes.ConsoleApp.csproj", "{11FF6A49-1EB4-43DB-B3D5-3BF11BA59678}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMS.Recipes.Core", "src\TMS.Recipes.Core\TMS.Recipes.Core.csproj", "{EDFE1176-DCC5-409B-BB11-E9434644FF49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesFinder_bot", "src\RecipesFinder_bot\RecipesFinder_bot.csproj", "{59678C6E-4411-444B-9537-55E3B70FC6D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11FF6A49-1EB4-43DB-B3D5-3BF11BA59678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11FF6A49-1EB4-43DB-B3D5-3BF11BA59678}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11FF6A49-1EB4-43DB-B3D5-3BF11BA59678}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11FF6A49-1EB4-43DB-B3D5-3BF11BA59678}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDFE1176-DCC5-409B-BB11-E9434644FF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDFE1176-DCC5-409B-BB11-E9434644FF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDFE1176-DCC5-409B-BB11-E9434644FF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDFE1176-DCC5-409B-BB11-E9434644FF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
