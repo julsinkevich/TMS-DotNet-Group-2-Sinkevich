@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesFinder_bot", "src\RecipesFinder_bot\RecipesFinder_bot.csproj", "{59678C6E-4411-444B-9537-55E3B70FC6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipesFinder_bot", "src\RecipesFinder_bot\RecipesFinder_bot.csproj", "{59678C6E-4411-444B-9537-55E3B70FC6D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForTests", "ForTests\ForTests.csproj", "{C002BFD2-A565-4FE8-9D0A-F21C3ECEC3BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59678C6E-4411-444B-9537-55E3B70FC6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C002BFD2-A565-4FE8-9D0A-F21C3ECEC3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C002BFD2-A565-4FE8-9D0A-F21C3ECEC3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C002BFD2-A565-4FE8-9D0A-F21C3ECEC3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C002BFD2-A565-4FE8-9D0A-F21C3ECEC3BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
