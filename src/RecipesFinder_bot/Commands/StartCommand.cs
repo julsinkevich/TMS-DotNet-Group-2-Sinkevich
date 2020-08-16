@@ -1,4 +1,5 @@
 ﻿using RecipesFinder_bot.Resources;
+using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -15,8 +16,16 @@ namespace RecipesFinder_bot.Commands
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            var chatId = message.Chat.Id;
-            await client.SendTextMessageAsync(chatId, $"{Start.Message} \U0001F369");
+            try
+            {
+                var chatId = message.Chat.Id;
+                await client.SendTextMessageAsync(chatId, $"{Start.Message} \U0001F369");
+            }
+            catch (Exception ex)
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, $"Sorry, we have problem with request, please, try again...");
+                Console.WriteLine(ex.Message);
+            }
         }
 
         /// <inheritdoc/>

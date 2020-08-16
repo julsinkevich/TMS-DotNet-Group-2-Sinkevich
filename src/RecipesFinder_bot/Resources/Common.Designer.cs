@@ -65,7 +65,7 @@ namespace RecipesFinder_bot.Resources {
         /// </summary>
         public static string Message {
             get {
-                return ResourceManager.GetString("Message", resourceCulture);
+                return ResourceManager.GetString("Пришло сообщение на сервер", resourceCulture);
             }
         }
     }
