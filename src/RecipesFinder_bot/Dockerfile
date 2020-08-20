@@ -2,15 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/RecipesFinder_bot/RecipesFinder_bot.csproj", "src/RecipesFinder_bot/"]
-RUN dotnet restore "src/RecipesFinder_bot/RecipesFinder_bot.csproj"
+COPY ["RecipesFinder_bot.csproj", "RecipesFinder_bot/"]
+RUN dotnet restore "RecipesFinder_bot/RecipesFinder_bot.csproj"
+WORKDIR "/src/RecipesFinder_bot"
 COPY . .
-WORKDIR "/src/src/RecipesFinder_bot"
 RUN dotnet build "RecipesFinder_bot.csproj" -c Release -o /app/build
 
 FROM build AS publish
