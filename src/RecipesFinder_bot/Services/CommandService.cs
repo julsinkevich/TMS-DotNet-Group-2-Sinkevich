@@ -21,7 +21,6 @@ namespace RecipesFinder_bot.Models
             {
                 new StartCommand(),
                 new AboutCommand(),
-                new IngredientCommand(options.Value)
             };
         }
 
