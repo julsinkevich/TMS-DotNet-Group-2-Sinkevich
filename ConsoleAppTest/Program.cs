@@ -2,9 +2,6 @@
 using Flurl.Http;
 using System;
 using System.Threading.Tasks;
-using Telegram.Bot;
-using Telegram.Bot.Types;
-using Telegram.Bot.Types.Enums;
 
 namespace ConsoleAppTest
 {
@@ -12,31 +9,22 @@ namespace ConsoleAppTest
     {
         static void Main(string[] args)
         {
-            var IngridientSearc = SearcingByIngridients("apple").GetAwaiter().GetResult();
-            Console.WriteLine(IngridientSearc.originalName);
+            var IngridientSearch = SearchingByIngridient("chicken").GetAwaiter().GetResult();
+            var recipesList = IngridientSearch.hits;
+            foreach (var hit in recipesList)
+            {
+                Console.WriteLine(hit.recipe.label);
+            }            
             Console.ReadLine();
         }
 
-        private static async Task<UsedIngredient> SearcingByIngridients(string ingridients)
+        private static async Task<RecipesFinder_bot.Models.Edamam.Example> SearchingByIngridient(string ing)
         {
-            return await "https://api.spoonacular.com/recipes/findByIngredients"
-                .AppendPathSegment(ingridients)
-                //.WithOAuthBearerToken("my_oauth_token")
-                .GetJsonAsync<UsedIngredient>();
+            //https://api.edamam.com/search?q=chicken&app_id=99c455ab&app_key=6e0062c1d84944adeb430d95976c1c69&from=0&to=3
+            return await "https://api.edamam.com/search"
+                .SetQueryParams(new { q = ing, app_id = "99c455ab", app_key = "6e0062c1d84944adeb430d95976c1c69" })
+                .GetJsonAsync<RecipesFinder_bot.Models.Edamam.Example>();
         }
-    }
-  /*  private static async Task<Meal> MethodAsync()
-     {
-            return await "https://www.themealdb.com/api/json/v1/1"//https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
-                .AppendPathSegment("person")
-                .SetQueryParams(new { a = 1, b = 2 })
-                .WithOAuthBearerToken("my_oauth_token")
-                .PostJsonAsync(new
-                {
-                    first_name = "Claire",
-                    last_name = "Underwood"
-                })
-                .ReceiveJson<Meal>();
-    }*/
+    }    
 }
 
