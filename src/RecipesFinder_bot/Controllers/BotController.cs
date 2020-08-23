@@ -41,7 +41,7 @@ namespace RecipesFinder_bot.Controllers
 
             var message = update.Message;
 
-            Console.WriteLine(string.Format(Common.Message, message.Chat.Id, message.Text));
+            //Console.WriteLine(string.Format(Common.Message, message.Chat.Id, message.Text));
 
             foreach (var command in _commandService.Get())
             {

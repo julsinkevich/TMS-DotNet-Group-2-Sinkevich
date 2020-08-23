@@ -30,8 +30,8 @@ namespace RecipesFinder_bot
                         options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                     });
         }
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        // This method gets called by the runtime
+        public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
             app.UseRouting();

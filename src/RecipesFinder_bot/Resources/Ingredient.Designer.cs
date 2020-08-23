@@ -61,20 +61,29 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ingredient.
+        ///   Looks up a localized string similar to Hmm.. This is not a ingredient, try sending something else!.
         /// </summary>
-        public static string Link {
+        public static string Exception {
             get {
-                return ResourceManager.GetString("Link", resourceCulture);
+                return ResourceManager.GetString("Exception", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Keep a recipes: {0}.
         /// </summary>
         public static string Message {
             get {
                 return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /ingredient.
+        /// </summary>
+        public static string Text {
+            get {
+                return ResourceManager.GetString("Text", resourceCulture);
             }
         }
     }

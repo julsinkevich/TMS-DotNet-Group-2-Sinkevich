@@ -14,13 +14,14 @@ namespace RecipesFinder_bot.Models
         /// <summary>
         /// Base constructor.
         /// </summary>
-        public CommandService(IOptions<API_Config> options)
+        public CommandService()
         {
-            options = options ?? throw new ArgumentNullException(nameof(options));
             _commands = new List<ITelegramCommand>
             {
                 new StartCommand(),
                 new AboutCommand(),
+                new GetByIngredientsCommand(),
+              //  new LinkCommand(),
             };
         }
 

@@ -121,6 +121,6 @@
     <value>/start</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>Hello! This bot allows you to cook something tasty (or not). List of available commands: /name - search by dish name; /ingredient -search by ingredient</value>
+    <value>Hello! This bot allows you to cook something tasty (or not). List of available commands:    /name - search by dish name;   /ingredient -search by ingredient;   /about - bot information</value>
   </data>
 </root>

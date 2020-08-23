@@ -22,20 +22,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>About.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Common.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Common.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\Ingredient.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Ingredient.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Link.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Link.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\Start.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -49,17 +39,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>About.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Common.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Common.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Ingredient.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Ingredient.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Link.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Link.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Start.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

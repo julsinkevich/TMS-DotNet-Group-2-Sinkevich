@@ -70,7 +70,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello! This bot allows you to cook something tasty (or not). List of available commands: /name - search by dish name; /ingredient -search by ingredient.
+        ///   Looks up a localized string similar to Hello! This bot allows you to cook something tasty (or not). List of available commands:    /name - search by dish name;   /ingredient -search by ingredient;   /about - bot information.
         /// </summary>
         public static string Message {
             get {
