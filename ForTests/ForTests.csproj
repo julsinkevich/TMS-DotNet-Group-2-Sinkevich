@@ -10,4 +10,8 @@
     <PackageReference Include="Flurl.Http" Version="2.4.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\src\RecipesFinder_bot\RecipesFinder_bot.csproj" />
+  </ItemGroup>
+
 </Project>

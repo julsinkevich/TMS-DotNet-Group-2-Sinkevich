@@ -2,7 +2,8 @@
 
 namespace ForTests
 {
-    
+    public class Ingrid
+    {
         public class MissedIngredient
         {
             public int id { get; set; }
@@ -69,5 +70,5 @@ namespace ForTests
             public IList<UnusedIngredient> unusedIngredients { get; set; }
             public int likes { get; set; }
         }
-    
+    }
 }
