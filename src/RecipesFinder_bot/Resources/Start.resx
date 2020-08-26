@@ -121,6 +121,15 @@
     <value>/start</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>Hello! This bot allows you to cook something tasty (or not). List of available commands:    /name - search by dish name;   /ingredient -search by ingredient;   /about - bot information</value>
+    <value>Hello! This bot allows you to cook something tasty (or not).    List of available commands:</value>
+  </data>
+  <data name="MessageCommandAbout" xml:space="preserve">
+    <value>/about - bot information;</value>
+  </data>
+  <data name="MessageCommandIngredient" xml:space="preserve">
+    <value>/ingredient - search by ingredient used Spoonacular;</value>
+  </data>
+  <data name="MessageCommandRecipes" xml:space="preserve">
+    <value>/recipes - recipes used Spoonacular;</value>
   </data>
 </root>
