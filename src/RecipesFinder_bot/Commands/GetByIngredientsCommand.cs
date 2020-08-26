@@ -21,40 +21,63 @@ namespace RecipesFinder_bot.Commands
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
         {
-            var text = string.Empty;
             try
             {
-                text = string.Format($"\U0001F525 {Ingredient.Message} ", GetIngredient(message.Text));
+                var recipes = GetRecipes(message.Text);
+                await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
+                if (recipes.Count() > 0)
+                    foreach (var recipeString in recipes)
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, recipeString);
+                    }
+                else
+                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F640 {Ingredient.MessageEx} ");
             }
             catch (Exception ex)
             {
-                text = $"{Ingredient.Exception},{ex.Message} \U0001F4A9";
-            }
-            finally
-            {
-                await client.SendTextMessageAsync(message.Chat.Id, text);
+                await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredient.Exception},{ex.Message} \U0001F4A9");
             }
         }
-        private string GetIngredient(string ingredient)
+        private IEnumerable<string> GetRecipes(string ingredient)
         {
-            var IngridientSearch = SearchingByIngridient(ingredient).GetAwaiter().GetResult();
-            var recipesList = IngridientSearch.hits.Select(x => x.recipe.label);
-            return string.Join(',', recipesList);
-            /* var searchParam = ingredient.ToLower().Replace("ingridient", "");
-             var IngridientSearch = SearchingByIngridient(searchParam).GetAwaiter().GetResult();
-             var recipesList = IngridientSearch.hits.Select(x => x.recipe.label);
-             return string.Join(',', recipesList);*/
-
+            var recipes = GetRecipesByIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
+            var recipesStrList = recipes.Select(x => "\n Title:" + x.title + "\n ID number:" + x.id + "\n" + x.image);
+            return recipesStrList;
         }
-        private static async Task<RecipesFinder_bot.Models.Edamam.Example> SearchingByIngridient(string ing)
-        {//Степа
-            //https://api.edamam.com/search?q=chicken&app_id=99c455ab&app_key=6e0062c1d84944adeb430d95976c1c69&from=0&to=3
-            return await "https://api.edamam.com/search"
-                .SetQueryParams(new { q = ing, app_id = "99c455ab", app_key = "6e0062c1d84944adeb430d95976c1c69" })
-                .GetJsonAsync<RecipesFinder_bot.Models.Edamam.Example>();
+        /// <summary>
+        /// Поиск рецепта по игредиентам 
+        /// </summary>
+        /// <param name="ing"></param>
+        /// <returns></returns>
+        private static async Task<IList<RecipesFinder_bot.Models.Spoonacular.Example>> GetRecipesByIngridient(string ing)
+        {
+            return await "https://api.spoonacular.com"
+                .AppendPathSegments("recipes", "findByIngredients")
+                .SetQueryParams(new
+                {
+                    apiKey = "d67605a945664091b46863dfb731c31a",
+                    ingredients = ing,
+                    limitLicense = true,
+                    instructionsRequired = true,
+                    veryPopular = true
+                })
+                .GetJsonAsync<IList<RecipesFinder_bot.Models.Spoonacular.Example>>();
         }
-
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
+    }
+    //Криво, но переписывать не хочу
+    public static class User
+    {
+        public static string GetQuery(this string userInput)
+        {
+            var str = string.Empty;
+            var words = userInput.Split(new char[] { ' ' }).Skip(1);
+            foreach (var word in words)
+            {
+                str += $"{word},+";
+            }
+            return str.Remove(str.Length - 2); ;
+        }
     }
 }

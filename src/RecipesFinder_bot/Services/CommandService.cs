@@ -21,7 +21,7 @@ namespace RecipesFinder_bot.Models
                 new StartCommand(),
                 new AboutCommand(),
                 new GetByIngredientsCommand(),
-              //  new LinkCommand(),
+                new GetRecipeByIDCommand()
             };
         }
 

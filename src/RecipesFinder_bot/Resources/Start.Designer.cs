@@ -88,7 +88,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ingredient - search by ingredient used Spoonacular;.
+        ///   Looks up a localized string similar to /ingredient - search by ingredient;.
         /// </summary>
         public static string MessageCommandIngredient {
             get {
@@ -97,7 +97,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /recipes - recipes used Spoonacular;.
+        ///   Looks up a localized string similar to /ID - you can finf some recipe by ID;.
         /// </summary>
         public static string MessageCommandRecipes {
             get {

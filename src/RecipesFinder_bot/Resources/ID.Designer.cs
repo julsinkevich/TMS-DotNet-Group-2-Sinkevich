@@ -22,14 +22,14 @@ namespace RecipesFinder_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Ingredient {
+    public class ID {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Ingredient() {
+        internal ID() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace RecipesFinder_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RecipesFinder_bot.Resources.Ingredient", typeof(Ingredient).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RecipesFinder_bot.Resources.ID", typeof(ID).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please, enter an ingredient in format: &quot;/ingredient potato&quot;.
+        ///   Looks up a localized string similar to Please, enter an ID in format: &quot;/ID 653611&quot;.
         /// </summary>
         public static string Exception {
             get {
@@ -79,7 +79,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hmm.. This is not a ingredient, try sending something else!.
+        ///   Looks up a localized string similar to Hmm.. This is not a ID, try sending something else!.
         /// </summary>
         public static string MessageEx {
             get {
@@ -88,7 +88,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ingredient.
+        ///   Looks up a localized string similar to /ID.
         /// </summary>
         public static string Text {
             get {
