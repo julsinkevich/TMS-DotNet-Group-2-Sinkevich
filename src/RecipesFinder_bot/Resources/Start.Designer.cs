@@ -70,11 +70,20 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello! This bot allows you to cook something tasty (or not).    List of available commands:.
+        ///   Looks up a localized string similar to Hello! This bot allows you to cook something tasty (or not). .
         /// </summary>
         public static string Message {
             get {
                 return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List of available commands:.
+        /// </summary>
+        public static string Message1 {
+            get {
+                return ResourceManager.GetString("Message1", resourceCulture);
             }
         }
         
@@ -88,7 +97,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ID - you can finf some recipe by ID;.
+        ///   Looks up a localized string similar to /id - you can finf some recipe by id;.
         /// </summary>
         public static string MessageCommandID {
             get {
@@ -106,7 +115,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ingredient - search by ingredient;.
+        ///   Looks up a localized string similar to /ingredients - search by ingredient;.
         /// </summary>
         public static string MessageCommandRecipe {
             get {

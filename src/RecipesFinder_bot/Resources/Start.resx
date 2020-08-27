@@ -121,19 +121,22 @@
     <value>/start</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>Hello! This bot allows you to cook something tasty (or not).    List of available commands:</value>
+    <value>Hello! This bot allows you to cook something tasty (or not). </value>
+  </data>
+  <data name="Message1" xml:space="preserve">
+    <value>List of available commands:</value>
   </data>
   <data name="MessageCommandAbout" xml:space="preserve">
     <value>/about - bot information;</value>
   </data>
   <data name="MessageCommandID" xml:space="preserve">
-    <value>/ID - you can finf some recipe by ID;</value>
+    <value>/id - you can finf some recipe by id;</value>
   </data>
   <data name="MessageCommandIng" xml:space="preserve">
     <value>/ing - This command finds a whore by ingredient; shows a list of all the required ingredients</value>
   </data>
   <data name="MessageCommandRecipe" xml:space="preserve">
-    <value>/ingredient - search by ingredient;</value>
+    <value>/ingredients - search by ingredient;</value>
   </data>
   <data name="MessageDelivio" xml:space="preserve">
     <value>https://delivio.by</value>

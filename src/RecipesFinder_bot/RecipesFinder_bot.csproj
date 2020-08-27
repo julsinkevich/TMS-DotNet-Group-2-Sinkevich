@@ -27,10 +27,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ID.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Ingredient.Designer.cs">
+    <Compile Update="Resources\Ingredients.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Ingredient.resx</DependentUpon>
+      <DependentUpon>Ingredients.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources\ListIngredients.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -53,9 +53,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ID.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Ingredient.resx">
+    <EmbeddedResource Update="Resources\Ingredients.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Ingredient.Designer.cs</LastGenOutput>
+      <LastGenOutput>Ingredients.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\ListIngredients.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -16,7 +16,7 @@ namespace RecipesFinder_bot.Commands
     public class GetRecipesByIngredientsCommand : ITelegramCommand
     {
         /// <inheritdoc/>
-        public string Name { get; } = Ingredient.Text;
+        public string Name { get; } = Ingredients.Text;
 
         /// <inheritdoc/>
         public async Task Execute(Message message, ITelegramBotClient client)
@@ -27,7 +27,7 @@ namespace RecipesFinder_bot.Commands
                 //await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
                 if (recipes.Count() > 0)
                 {
-                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
+                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredients.Message} ");
                     foreach (var recipeString in recipes)
                     {
                         await client.SendTextMessageAsync(message.Chat.Id, recipeString);
@@ -35,12 +35,12 @@ namespace RecipesFinder_bot.Commands
                 }
                 else
                 {
-                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F640 {Ingredient.MessageEx} ");
+                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F640 {Ingredients.MessageEx} ");
                 }
             }
             catch (Exception ex)
             {
-                await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredient.Exception},{ex.Message} \U0001F4A9");
+                await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredients.Exception},{ex.Message} \U0001F4A9");
             }
         }
         private IEnumerable<string> GetRecipes(string ingredient)
@@ -71,7 +71,6 @@ namespace RecipesFinder_bot.Commands
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
     }
-    //
     public static class User
     {
         public static string GetQuery(this string userInput)

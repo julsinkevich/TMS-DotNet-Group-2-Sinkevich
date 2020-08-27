@@ -61,7 +61,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please, enter an ID in format: &quot;/ID 653611&quot;.
+        ///   Looks up a localized string similar to Please, enter an id in format: &quot;/id 653611&quot;.
         /// </summary>
         public static string Exception {
             get {
@@ -79,7 +79,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hmm.. This is not a ID, try sending something else!.
+        ///   Looks up a localized string similar to Hmm.. This is not a id, try sending something else!.
         /// </summary>
         public static string MessageEx {
             get {
@@ -88,7 +88,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ID.
+        ///   Looks up a localized string similar to /id.
         /// </summary>
         public static string Text {
             get {
