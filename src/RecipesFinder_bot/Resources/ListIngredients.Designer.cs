@@ -22,14 +22,14 @@ namespace RecipesFinder_bot.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Start {
+    public class ListIngredients {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Start() {
+        internal ListIngredients() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace RecipesFinder_bot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RecipesFinder_bot.Resources.Start", typeof(Start).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RecipesFinder_bot.Resources.ListIngredients", typeof(ListIngredients).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,16 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /start.
+        ///   Looks up a localized string similar to Please, enter an ingredient in format: &quot;/ing potato&quot;.
         /// </summary>
-        public static string Link {
+        public static string Exception {
             get {
-                return ResourceManager.GetString("Link", resourceCulture);
+                return ResourceManager.GetString("Exception", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello! This bot allows you to cook something tasty (or not).    List of available commands:.
+        ///   Looks up a localized string similar to Keep a recipes: .
         /// </summary>
         public static string Message {
             get {
@@ -79,74 +79,20 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /about - bot information;.
+        ///   Looks up a localized string similar to Hmm.. This is not a ingredient, try sending something else!.
         /// </summary>
-        public static string MessageCommandAbout {
+        public static string MessageEx {
             get {
-                return ResourceManager.GetString("MessageCommandAbout", resourceCulture);
+                return ResourceManager.GetString("MessageEx", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ID - you can finf some recipe by ID;.
+        ///   Looks up a localized string similar to /ing.
         /// </summary>
-        public static string MessageCommandID {
+        public static string Text {
             get {
-                return ResourceManager.GetString("MessageCommandID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /ing - This command finds a whore by ingredient; shows a list of all the required ingredients.
-        /// </summary>
-        public static string MessageCommandIng {
-            get {
-                return ResourceManager.GetString("MessageCommandIng", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /ingredient - search by ingredient;.
-        /// </summary>
-        public static string MessageCommandRecipe {
-            get {
-                return ResourceManager.GetString("MessageCommandRecipe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://delivio.by.
-        /// </summary>
-        public static string MessageDelivio {
-            get {
-                return ResourceManager.GetString("MessageDelivio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to @koko_by_bot.
-        /// </summary>
-        public static string MessageKoko {
-            get {
-                return ResourceManager.GetString("MessageKoko", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to If you are too lazy to cook, then order:.
-        /// </summary>
-        public static string MessageLaziness {
-            get {
-                return ResourceManager.GetString("MessageLaziness", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://menu-menu.by.
-        /// </summary>
-        public static string MessageMenu {
-            get {
-                return ResourceManager.GetString("MessageMenu", resourceCulture);
+                return ResourceManager.GetString("Text", resourceCulture);
             }
         }
     }

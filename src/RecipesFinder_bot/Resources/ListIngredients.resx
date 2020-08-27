@@ -117,34 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Link" xml:space="preserve">
-    <value>/start</value>
+  <data name="Exception" xml:space="preserve">
+    <value>Please, enter an ingredient in format: "/ing potato"</value>
   </data>
   <data name="Message" xml:space="preserve">
-    <value>Hello! This bot allows you to cook something tasty (or not).    List of available commands:</value>
+    <value>Keep a recipes: </value>
   </data>
-  <data name="MessageCommandAbout" xml:space="preserve">
-    <value>/about - bot information;</value>
+  <data name="MessageEx" xml:space="preserve">
+    <value>Hmm.. This is not a ingredient, try sending something else!</value>
   </data>
-  <data name="MessageCommandID" xml:space="preserve">
-    <value>/ID - you can finf some recipe by ID;</value>
-  </data>
-  <data name="MessageCommandIng" xml:space="preserve">
-    <value>/ing - This command finds a whore by ingredient; shows a list of all the required ingredients</value>
-  </data>
-  <data name="MessageCommandRecipe" xml:space="preserve">
-    <value>/ingredient - search by ingredient;</value>
-  </data>
-  <data name="MessageDelivio" xml:space="preserve">
-    <value>https://delivio.by</value>
-  </data>
-  <data name="MessageKoko" xml:space="preserve">
-    <value>@koko_by_bot</value>
-  </data>
-  <data name="MessageLaziness" xml:space="preserve">
-    <value>If you are too lazy to cook, then order:</value>
-  </data>
-  <data name="MessageMenu" xml:space="preserve">
-    <value>https://menu-menu.by</value>
+  <data name="Text" xml:space="preserve">
+    <value>/ing</value>
   </data>
 </root>

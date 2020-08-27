@@ -21,7 +21,8 @@ namespace RecipesFinder_bot.Commands
                 var chatId = message.Chat.Id;
                 await client.SendTextMessageAsync(chatId, $"{Start.Message} \U0001F369");
                 await client.SendTextMessageAsync(chatId, $"\U0001F389 \n{Start.MessageCommandAbout} \U0001F63C \n{Start.MessageCommandRecipe} \U0001F34C \n{Start.MessageCommandID} \U0001F608");
-                //await client.SendTextMessageAsync(chatId, $"{Start.MessageCommandIng} \U0001F374");
+                //await client.SendTextMessageAsync(chatId, $"{Start.MessageCommandIng} \U0001F369");
+                await client.SendTextMessageAsync(chatId, $"\n{Start.MessageLaziness} \U0001F47B \n{Start.MessageDelivio} \U0001F47D \n{Start.MessageMenu} \U0001F525 \n{Start.MessageKoko} \U0001F428");
             }
             catch (Exception ex)
             {

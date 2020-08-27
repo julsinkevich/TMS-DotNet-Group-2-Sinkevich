@@ -32,6 +32,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Ingredient.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\ListIngredients.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListIngredients.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Start.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -51,6 +56,10 @@
     <EmbeddedResource Update="Resources\Ingredient.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Ingredient.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ListIngredients.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ListIngredients.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Start.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
