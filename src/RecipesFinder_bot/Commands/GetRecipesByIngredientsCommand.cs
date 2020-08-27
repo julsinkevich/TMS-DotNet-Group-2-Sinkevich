@@ -13,7 +13,7 @@ using Telegram.Bot.Types.Enums;
 namespace RecipesFinder_bot.Commands
 {
     /// <inheritdoc cref="ITelegramCommand"/>
-    public class GetByIngredientsCommand : ITelegramCommand
+    public class GetRecipesByIngredientsCommand : ITelegramCommand
     {
         /// <inheritdoc/>
         public string Name { get; } = Ingredient.Text;
@@ -24,14 +24,19 @@ namespace RecipesFinder_bot.Commands
             try
             {
                 var recipes = GetRecipes(message.Text);
-                await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
+                //await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
                 if (recipes.Count() > 0)
+                {
+                    await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
                     foreach (var recipeString in recipes)
                     {
                         await client.SendTextMessageAsync(message.Chat.Id, recipeString);
                     }
+                }
                 else
+                {
                     await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F640 {Ingredient.MessageEx} ");
+                }
             }
             catch (Exception ex)
             {
@@ -41,7 +46,7 @@ namespace RecipesFinder_bot.Commands
         private IEnumerable<string> GetRecipes(string ingredient)
         {
             var recipes = GetRecipesByIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
-            var recipesStrList = recipes.Select(x => "\n Title:" + x.title + "\n ID number:" + x.id + "\n" + x.image);
+            var recipesStrList = recipes.Select(x => "\n Title: " + x.title + "\n ID number: " + x.id + "\n" + x.image);
             return recipesStrList;
         }
         /// <summary>
@@ -66,7 +71,7 @@ namespace RecipesFinder_bot.Commands
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
     }
-    //Криво, но переписывать не хочу
+    //
     public static class User
     {
         public static string GetQuery(this string userInput)

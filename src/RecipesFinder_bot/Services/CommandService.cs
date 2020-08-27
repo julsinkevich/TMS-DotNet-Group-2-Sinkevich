@@ -20,11 +20,10 @@ namespace RecipesFinder_bot.Models
             {
                 new StartCommand(),
                 new AboutCommand(),
-                new GetByIngredientsCommand(),
-                new GetRecipeByIDCommand()
+                new GetRecipesByIngredientsCommand(),
+                new GetRecipeByIDCommand(),
             };
         }
-
         /// <inheritdoc/>
         public IEnumerable<ITelegramCommand> Get() => _commands;
     }

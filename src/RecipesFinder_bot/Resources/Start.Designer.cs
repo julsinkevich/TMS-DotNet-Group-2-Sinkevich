@@ -88,20 +88,29 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ingredient - search by ingredient;.
+        ///   Looks up a localized string similar to /ID - you can finf some recipe by ID;.
         /// </summary>
-        public static string MessageCommandIngredient {
+        public static string MessageCommandID {
             get {
-                return ResourceManager.GetString("MessageCommandIngredient", resourceCulture);
+                return ResourceManager.GetString("MessageCommandID", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ID - you can finf some recipe by ID;.
+        ///   Looks up a localized string similar to /ing - This command finds a whore by ingredient; shows a list of all the required ingredients.
         /// </summary>
-        public static string MessageCommandRecipes {
+        public static string MessageCommandIng {
             get {
-                return ResourceManager.GetString("MessageCommandRecipes", resourceCulture);
+                return ResourceManager.GetString("MessageCommandIng", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /ingredient - search by ingredient;.
+        /// </summary>
+        public static string MessageCommandRecipe {
+            get {
+                return ResourceManager.GetString("MessageCommandRecipe", resourceCulture);
             }
         }
     }

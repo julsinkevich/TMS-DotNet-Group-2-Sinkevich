@@ -126,10 +126,13 @@
   <data name="MessageCommandAbout" xml:space="preserve">
     <value>/about - bot information;</value>
   </data>
-  <data name="MessageCommandIngredient" xml:space="preserve">
-    <value>/ingredient - search by ingredient;</value>
-  </data>
-  <data name="MessageCommandRecipes" xml:space="preserve">
+  <data name="MessageCommandID" xml:space="preserve">
     <value>/ID - you can finf some recipe by ID;</value>
+  </data>
+  <data name="MessageCommandIng" xml:space="preserve">
+    <value>/ing - This command finds a whore by ingredient; shows a list of all the required ingredients</value>
+  </data>
+  <data name="MessageCommandRecipe" xml:space="preserve">
+    <value>/ingredient - search by ingredient;</value>
   </data>
 </root>

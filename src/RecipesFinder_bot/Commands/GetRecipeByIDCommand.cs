@@ -25,9 +25,13 @@ namespace RecipesFinder_bot.Commands
                 var recipeString = GetID(recipeID);
                 await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {ID.Message} ");
                 if (recipeString.Count() > 0)
+                {
                     await client.SendTextMessageAsync(message.Chat.Id, recipeString);
+                }
                 else
+                {
                     await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F640 {ID.MessageEx} ");
+                }
             }
             catch (Exception ex)
             {
@@ -37,7 +41,8 @@ namespace RecipesFinder_bot.Commands
         private string GetID(int id)
         {
             var recipe = GetRecipeByID(id).GetAwaiter().GetResult();
-            return "\n Title:" + recipe.title + "\n Summary:" + recipe.summary + "\n Instructions:" + recipe.instructions + "\n" + recipe.image;
+            return "\n Title: " + recipe.title + "\n Instructions: " + recipe.instructions + "\n" + recipe.image;
+           // return "\n Title:" + recipe.title + "\n Summary:" + recipe.summary + "\n Instructions:" + recipe.instructions + "\n" + recipe.image;
         }
         /// <summary>
         /// Способ приготовления рецепта по id
