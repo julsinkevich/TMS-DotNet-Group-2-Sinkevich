@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace RecipesFinder_bot.Models.Spoonacular.recipes
+namespace RecipesFinder_bot.Models.Spoonacular
 {
     public class RecipesFound
     {

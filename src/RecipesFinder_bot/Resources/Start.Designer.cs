@@ -61,6 +61,15 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, we have problem with request, please, try again....
+        /// </summary>
+        public static string Exception {
+            get {
+                return ResourceManager.GetString("Exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /start.
         /// </summary>
         public static string Link {
@@ -106,7 +115,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ing - This command finds a whore by ingredient; shows a list of all the required ingredients.
+        ///   Looks up a localized string similar to /ing - search by ingredients (cooking link).
         /// </summary>
         public static string MessageCommandIng {
             get {

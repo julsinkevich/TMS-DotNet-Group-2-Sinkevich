@@ -70,7 +70,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keep a recipes: .
+        ///   Looks up a localized string similar to Keep a list of recipes with the ingredients entered. .
         /// </summary>
         public static string Message {
             get {
@@ -79,7 +79,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hmm.. This is not a ingredient, try sending something else!.
+        ///   Looks up a localized string similar to Oh. There is no such ingredient, or I can&apos;t find it. Hmm.. Try sending something else!.
         /// </summary>
         public static string MessageEx {
             get {

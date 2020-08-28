@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Exception" xml:space="preserve">
+    <value>Sorry, we have problem with request, please, try again...</value>
+  </data>
   <data name="Link" xml:space="preserve">
     <value>/start</value>
   </data>
@@ -133,7 +136,7 @@
     <value>/id - you can finf some recipe by id;</value>
   </data>
   <data name="MessageCommandIng" xml:space="preserve">
-    <value>/ing - This command finds a whore by ingredient; shows a list of all the required ingredients</value>
+    <value>/ing - search by ingredients (cooking link)</value>
   </data>
   <data name="MessageCommandRecipe" xml:space="preserve">
     <value>/ingredients - search by ingredient;</value>

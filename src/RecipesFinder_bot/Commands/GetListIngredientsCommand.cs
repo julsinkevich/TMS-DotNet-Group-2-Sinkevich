@@ -23,7 +23,6 @@ namespace RecipesFinder_bot.Commands
             try
             {
                 var recipes = GetRecipes(message.Text);
-                //await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
                 if (recipes.Count() > 1)
                 {
                     await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {ListIngredients.Message} ");
@@ -36,28 +35,25 @@ namespace RecipesFinder_bot.Commands
             }
             catch (Exception ex)
             {
-                await client.SendTextMessageAsync(message.Chat.Id, $"{ListIngredients.Exception},{ex.Message} \U0001F4A9");
+                await client.SendTextMessageAsync(message.Chat.Id, $"{ListIngredients.Exception},\n{ex.Message} \U0001F4A9");
             }
         }
         private string GetRecipes(string ingredient)
         {
-            //var recipes = GetListIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
-            //var recipesStrList = recipes.hits(x => "\n Title:" + x.label + "\n ID number:" + x.ingredientLines + "\n" + x.image);
-            //return recipesStrList;
-            var IngridientSearch = GetListIngridient(ingredient).GetAwaiter().GetResult();
-            var recipesList = IngridientSearch.hits.Select(x => "\n Title: " + x.recipe.label + "\n" + x.recipe.image);
-            return string.Join('\n', recipesList);
+            var recipes = GetListIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
+            var recipesStrList = recipes.hits.Select(x => "\nRecipe name: " + x.recipe.label + "\nSource : " + x.recipe.source + "\nСooking link : " + x.recipe.url);
+            return string.Join('\n', recipesStrList);
         }
         /// <summary>
         /// Поиск рецепта по игредиентам 
         /// </summary>
         /// <param name="ing"></param>
         /// <returns></returns>
-        private static async Task<RecipesFinder_bot.Models.Edamam.Example> GetListIngridient(string ing)
+        private static async Task<Models.Edamam.Example> GetListIngridient(string ing)
         {
             return await "https://api.edamam.com/search"
                 .SetQueryParams(new { q = ing, app_id = "99c455ab", app_key = "6e0062c1d84944adeb430d95976c1c69" })
-                .GetJsonAsync<RecipesFinder_bot.Models.Edamam.Example>();
+                .GetJsonAsync<Models.Edamam.Example>();
         }
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);

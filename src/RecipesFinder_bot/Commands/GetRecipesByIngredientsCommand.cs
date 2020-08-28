@@ -40,7 +40,7 @@ namespace RecipesFinder_bot.Commands
             }
             catch (Exception ex)
             {
-                await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredients.Exception},{ex.Message} \U0001F4A9");
+                await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredients.Exception},\n{ex.Message} \U0001F4A9");
             }
         }
         private IEnumerable<string> GetRecipes(string ingredient)
@@ -54,7 +54,7 @@ namespace RecipesFinder_bot.Commands
         /// </summary>
         /// <param name="ing"></param>
         /// <returns></returns>
-        private static async Task<IList<RecipesFinder_bot.Models.Spoonacular.Example>> GetRecipesByIngridient(string ing)
+        private static async Task<IList<Models.Spoonacular.Example>> GetRecipesByIngridient(string ing)
         {
             return await "https://api.spoonacular.com"
                 .AppendPathSegments("recipes", "findByIngredients")
@@ -66,7 +66,7 @@ namespace RecipesFinder_bot.Commands
                     instructionsRequired = true,
                     veryPopular = true
                 })
-                .GetJsonAsync<IList<RecipesFinder_bot.Models.Spoonacular.Example>>();
+                .GetJsonAsync<IList<Models.Spoonacular.Example>>();
         }
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);

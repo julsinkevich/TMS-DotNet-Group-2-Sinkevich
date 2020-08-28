@@ -22,7 +22,7 @@ namespace RecipesFinder_bot.Models
                 new AboutCommand(),
                 new GetRecipesByIngredientsCommand(),
                 new GetRecipeByIDCommand(),
-                //new GetListIngredientsCommand(),
+                new GetListIngredientsCommand()
             };
         }
         /// <inheritdoc/>

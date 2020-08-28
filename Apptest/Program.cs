@@ -45,7 +45,12 @@ namespace Apptest
             Console.ReadLine();
         }
         //private static async Task<RecipesFinder_bot.Models.Edamam.Example> SearchingByIngridient(string ing)
-
+        private string GetRecipes(string ingredient)
+        {
+            var recipes = SearchingByIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
+            var recipesStrList = recipes.hits.Select(x => "\n Title: " + x.recipe.label + "\n ID number: " + x.recipe.url + "\n" + x.recipe.image);
+            return string.Join('\n', recipesStrList);
+        }
         private static async Task<RecipesFinder_bot.Models.Edamam.Example> SearchingByIngridient(string ing)
         {
             //Cтепа
@@ -78,13 +83,13 @@ namespace Apptest
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        private static async Task<RecipesFinder_bot.Models.Spoonacular.recipes.RecipesFound.Example> SearcingRecipes(int id)
+        private static async Task<RecipesFinder_bot.Models.Spoonacular.RecipesFound.Example> SearcingRecipes(int id)
         {
             return await "https://api.spoonacular.com"
                 .AppendPathSegments("recipes", id, "information")
                 .SetQueryParams(new { includeNutrition = false, apiKey = "d67605a945664091b46863dfb731c31a" })
 
-                .GetJsonAsync<RecipesFinder_bot.Models.Spoonacular.recipes.RecipesFound.Example>();
+                .GetJsonAsync<RecipesFinder_bot.Models.Spoonacular.RecipesFound.Example>();
         }
     }
     //убирает ingredients из строки поиска. Но надо доработать 
