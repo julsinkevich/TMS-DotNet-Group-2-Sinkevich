@@ -19,6 +19,16 @@ namespace Apptest
                 Console.WriteLine(hit.recipe.label);
             }
             Console.ReadLine();
+
+            var text = Console.ReadLine();
+            string[] array = { "/start", "/about", "/ingredients", "/links", "/id" };
+            foreach (var str in array)
+            {
+                if (str != text)
+                {
+                    Console.WriteLine(string.Format("Слово не {0} содержится в массиве", text));
+                }
+            }
             //Влад
             Console.WriteLine("write ingredient");
             var userInputIngredients = Console.ReadLine();
@@ -41,7 +51,6 @@ namespace Apptest
                 Console.WriteLine(item.originalString);
             }
             Console.WriteLine(GetRecipe.instructions);
-
             Console.ReadLine();
         }
         //private static async Task<RecipesFinder_bot.Models.Edamam.Example> SearchingByIngridient(string ing)
@@ -106,7 +115,6 @@ namespace Apptest
             return str.Remove(str.Length - 2); ;
         }
     }
-
 }
 
 

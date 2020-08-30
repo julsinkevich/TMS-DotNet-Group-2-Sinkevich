@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RecipesFinder_bot.Interfaces;
-using RecipesFinder_bot.Resources;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
@@ -40,7 +39,6 @@ namespace RecipesFinder_bot.Controllers
             }
 
             var message = update.Message;
-
             //Console.WriteLine(string.Format(Common.Message, message.Chat.Id, message.Text));
 
             foreach (var command in _commandService.Get())
@@ -51,7 +49,6 @@ namespace RecipesFinder_bot.Controllers
                     break;
                 }
             }
-
             return Ok();
         }
     }

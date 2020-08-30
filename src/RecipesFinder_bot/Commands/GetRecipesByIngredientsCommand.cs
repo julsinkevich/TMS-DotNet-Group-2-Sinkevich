@@ -4,7 +4,6 @@ using RecipesFinder_bot.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -24,7 +23,6 @@ namespace RecipesFinder_bot.Commands
             try
             {
                 var recipes = GetRecipes(message.Text);
-                //await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredient.Message} ");
                 if (recipes.Count() > 0)
                 {
                     await client.SendTextMessageAsync(message.Chat.Id, $"\U0001F525 {Ingredients.Message} ");

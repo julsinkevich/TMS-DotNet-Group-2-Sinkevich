@@ -61,7 +61,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please, enter an ingredient in format: &quot;/ing potato&quot;.
+        ///   Looks up a localized string similar to Please, enter an ingredient in format: &quot;/links potato&quot;.
         /// </summary>
         public static string Exception {
             get {
@@ -70,7 +70,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keep a list of recipes with the ingredients entered. .
+        ///   Looks up a localized string similar to Keep a list of recipes with the ingredients entered:.
         /// </summary>
         public static string Message {
             get {
@@ -79,7 +79,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oh. There is no such ingredient, or I can&apos;t find it. Hmm.. Try sending something else!.
+        ///   Looks up a localized string similar to Oh. There is no such ingredient, or I can&apos;t find it. Hmm.. Try sending something else or or try command /ingredients!.
         /// </summary>
         public static string MessageEx {
             get {
@@ -88,7 +88,7 @@ namespace RecipesFinder_bot.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /ing.
+        ///   Looks up a localized string similar to /links.
         /// </summary>
         public static string Text {
             get {

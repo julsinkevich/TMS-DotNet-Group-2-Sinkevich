@@ -21,7 +21,6 @@ namespace RecipesFinder_bot.Extensions
             serviceCollection.AddTransient<ITelegramBotClient>(x => client);
 
             return serviceCollection;
-
         }
     }
 }

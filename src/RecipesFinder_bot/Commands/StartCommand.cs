@@ -1,5 +1,4 @@
 ﻿using RecipesFinder_bot.Resources;
-using System;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
