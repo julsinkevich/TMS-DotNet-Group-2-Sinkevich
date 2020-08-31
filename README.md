@@ -46,7 +46,9 @@ heroku container:release web -a recipesfinder-bot
 - [Docker](https://www.docker.com/);
 - [ASP.NET Core 3.1](https://docs.microsoft.com/en-us/aspnet/core/);
 - [Telegram Bot](https://www.nuget.org/packages/Telegram.Bot/);
-- [is.gd](https://www.nuget.org/packages/is.gd/);
+- [Edamam](https://developer.edamam.com/);
+- [Spoonacular](https://spoonacular.com/food-api);
+
 
 ## Teacher
 

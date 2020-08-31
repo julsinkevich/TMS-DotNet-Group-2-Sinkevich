@@ -21,6 +21,16 @@ namespace RecipesFinder_bot.Commands
             await client.SendTextMessageAsync(chatId, $"{Start.MessageLaziness} \U0001F47B \n{Start.MessageDelivio} \U0001F47D \n{Start.MessageMenu} \U0001F525 \n{Start.MessageKoko} \U0001F428");
         }
         /// <inheritdoc/>
-        public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
+        public bool Contains(Message message)
+        {
+            if (message != null)
+            {
+                return message.Type == MessageType.Text && message.Text.Contains(Name);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

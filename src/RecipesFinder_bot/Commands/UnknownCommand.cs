@@ -16,7 +16,7 @@ namespace RecipesFinder_bot.Commands
         public async Task Execute(Message message, ITelegramBotClient client)
         {
             var chatId = message.Chat.Id;
-            await client.SendTextMessageAsync(chatId, "Sorry, this command is unknown to me. \U0001274C Possible incorrect input...Example of using the command: start: /start [WORD]");
+            await client.SendTextMessageAsync(chatId, "Sorry, this command is unknown to me. Please, try again...");
         }
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);

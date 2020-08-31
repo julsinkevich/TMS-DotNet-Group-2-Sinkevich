@@ -55,6 +55,16 @@ namespace RecipesFinder_bot.Commands
                 .GetJsonAsync<Models.Edamam.Example>();
         }
         /// <inheritdoc/>
-        public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
+        public bool Contains(Message message)
+        {
+            if (message != null)
+            {
+                return message.Type == MessageType.Text && message.Text.Contains(Name);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
