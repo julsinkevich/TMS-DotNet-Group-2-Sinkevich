@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RecipesFinder_bot.Models.Spoonacular
+﻿namespace RecipesFinder_bot.Models.Spoonacular
 {
     public class Example
     {
@@ -10,9 +8,6 @@ namespace RecipesFinder_bot.Models.Spoonacular
         public string imageType { get; set; }
         public int usedIngredientCount { get; set; }
         public int missedIngredientCount { get; set; }
-        //public IList<MissedIngredient> missedIngredients { get; set; }
-       // public IList<UsedIngredient> usedIngredients { get; set; }
-      //  public IList<UnusedIngredient> unusedIngredients { get; set; }
         public int likes { get; set; }
     }
 }

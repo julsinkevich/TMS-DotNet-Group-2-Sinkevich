@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
@@ -17,6 +16,7 @@ namespace RecipesFinder_bot
         {
             _configuration = configuration;
         }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -30,6 +30,7 @@ namespace RecipesFinder_bot
                         options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                     });
         }
+
         // This method gets called by the runtime
         public void Configure(IApplicationBuilder app)
         {

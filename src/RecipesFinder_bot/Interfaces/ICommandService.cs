@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 
 namespace RecipesFinder_bot.Interfaces
-{  
+{
     /// <summary>
-     /// Commands management service.
-     /// </summary>
+    /// Commands management service.
+    /// </summary>
     public interface ICommandService
     {
         /// <summary>

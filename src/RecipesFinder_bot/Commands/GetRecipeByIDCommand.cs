@@ -37,11 +37,13 @@ namespace RecipesFinder_bot.Commands
                 await client.SendTextMessageAsync(message.Chat.Id, $"{ID.Exception},\n{ex.Message} \U0001F4A9");
             }
         }
+
         private string GetID(int id)
         {
             var recipe = GetRecipeByID(id).GetAwaiter().GetResult();
             return "\n Title: " + recipe.title + "\n Instructions: " + recipe.instructions + "\n" + recipe.image;
         }
+
         /// <summary>
         /// Способ приготовления рецепта по id
         /// </summary>
@@ -55,6 +57,7 @@ namespace RecipesFinder_bot.Commands
 
                 .GetJsonAsync<Models.Spoonacular.RecipesFound.Example>();
         }
+
         /// <inheritdoc/>
         public bool Contains(Message message)
         {

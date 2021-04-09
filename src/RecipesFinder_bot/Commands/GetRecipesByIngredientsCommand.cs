@@ -41,14 +41,16 @@ namespace RecipesFinder_bot.Commands
                 await client.SendTextMessageAsync(message.Chat.Id, $"{Ingredients.Exception},\n{ex.Message} \U0001F4A9");
             }
         }
+
         private IEnumerable<string> GetRecipes(string ingredient)
         {
             var recipes = GetRecipesByIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
             var recipesStrList = recipes.Select(x => "\n Title: " + x.title + "\n ID number: " + x.id + "\n" + x.image);
             return recipesStrList;
         }
+
         /// <summary>
-        /// Поиск рецепта по игредиентам 
+        /// Поиск рецепта по игредиентам
         /// </summary>
         /// <param name="ing"></param>
         /// <returns></returns>
@@ -66,6 +68,7 @@ namespace RecipesFinder_bot.Commands
                 })
                 .GetJsonAsync<IList<Models.Spoonacular.Example>>();
         }
+
         /// <inheritdoc/>
         public bool Contains(Message message)
         {
@@ -79,6 +82,7 @@ namespace RecipesFinder_bot.Commands
             }
         }
     }
+
     public static class User
     {
         public static string GetQuery(this string userInput)

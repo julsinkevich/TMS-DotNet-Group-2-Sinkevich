@@ -1,7 +1,5 @@
-using Microsoft.Extensions.Options;
 using RecipesFinder_bot.Commands;
 using RecipesFinder_bot.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace RecipesFinder_bot.Models
@@ -26,6 +24,7 @@ namespace RecipesFinder_bot.Models
                 new UnknownCommand()
             };
         }
+
         /// <inheritdoc/>
         public IEnumerable<ITelegramCommand> Get() => _commands;
     }

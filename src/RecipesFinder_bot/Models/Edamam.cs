@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using static RecipesFinder_bot.Models.Edamam;
 
 namespace RecipesFinder_bot.Models
 {
@@ -11,7 +10,7 @@ namespace RecipesFinder_bot.Models
             public double weight { get; set; }
             public string image { get; set; }
         }
-        
+
         public class Recipe
         {
             public string uri { get; set; }

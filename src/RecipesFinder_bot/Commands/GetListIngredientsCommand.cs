@@ -37,14 +37,16 @@ namespace RecipesFinder_bot.Commands
                 await client.SendTextMessageAsync(message.Chat.Id, $"{ListIngredients.Exception},\n{ex.Message} \U0001F4A9");
             }
         }
+
         private string GetRecipes(string ingredient)
         {
             var recipes = GetListIngridient(ingredient.GetQuery()).GetAwaiter().GetResult();
             var recipesStrList = recipes.hits.Select(x => "\nRecipe name: " + x.recipe.label + "\nSource : " + x.recipe.source + "\nСooking link : " + x.recipe.url);
             return string.Join('\n', recipesStrList);
         }
+
         /// <summary>
-        /// Поиск рецепта по игредиентам 
+        /// Поиск рецепта по игредиентам
         /// </summary>
         /// <param name="ing"></param>
         /// <returns></returns>
@@ -54,6 +56,7 @@ namespace RecipesFinder_bot.Commands
                 .SetQueryParams(new { q = ing, app_id = "99c455ab", app_key = "6e0062c1d84944adeb430d95976c1c69" })
                 .GetJsonAsync<Models.Edamam.Example>();
         }
+
         /// <inheritdoc/>
         public bool Contains(Message message)
         {

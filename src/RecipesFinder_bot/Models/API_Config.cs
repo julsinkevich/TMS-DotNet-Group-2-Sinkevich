@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RecipesFinder_bot.Models
+﻿namespace RecipesFinder_bot.Models
 {
     public class API_Config
     {

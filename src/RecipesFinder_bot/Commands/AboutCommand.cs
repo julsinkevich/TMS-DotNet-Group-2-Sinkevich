@@ -18,6 +18,7 @@ namespace RecipesFinder_bot.Commands
             var chatId = message.Chat.Id;
             await client.SendTextMessageAsync(chatId, $"\U0001F389 {About.Message} \U0001F449 {About.ShortLink} \U0001F448");
         }
+
         /// <inheritdoc/>
         public bool Contains(Message message) => message.Type != MessageType.Text ? false : message.Text.Contains(Name);
     }
